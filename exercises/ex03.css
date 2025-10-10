@@ -1,0 +1,33 @@
+
+.test-div {
+background: orange; 
+padding: 20px;
+margin: 20px;
+}
+
+.test-div h2 {
+    color: plum;
+}
+
+.button.special:hover{
+    background: blue;
+}
+
+.test-div:hover {
+    background: pink;
+}
+
+h1, h2, h3, h4 {
+    text-decoration: underline;
+}
+
+.special:hover{ 
+    background: purple;
+}
+
+.my-flex{display:flex;}
+
+#house{
+display:flex; 
+
+}
