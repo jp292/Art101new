@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- All techy stuff goes here, inside HEAD -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Overall title of your page -->
+    <title>Sea Life!</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="env07.css">
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Link to external JavaScript file -->
+    <script src="env07.js" defer></script>
+</head>
+
+<body>
+    <!-- Main content goes here, inside BODY -->
+    <h1>Facts about sea life!!</h1>
+
+</body>
+
+<div class="nice-block"><span>more</span> 
+  <p>Clown Fish. Clownfish live in a symbiotic relationship with sea anemones, are born male and can change to a dominant female, and are highly territorial. They communicate through popping and clicking sounds, and males will guard and care for the eggs until they hatch.  </p>
+</div>
+
+<div class="nice-block"><span>more</span> 
+  <p>Coral Reef. Coral reefs are diverse underwater ecosystems that support a quarter of all marine life, are the largest structures made by living organisms, and provide vital shoreline protection from storms. They are built by colonies of tiny animals called polyps, which secrete a hard, calcium carbonate skeleton, and are crucial for the survival of many species, including up to 2 million marine species.   </p>
+</div>
+
+<div class="nice-block"><span>more</span> 
+  <p>Sharks. Sharks are ancient fish with a skeleton of cartilage instead of bone, and they use electroreception to sense their prey. There are over 500 species, ranging from small sharks to the largest fish, the whale shark, and many are threatened by human activities like overfishing. Their life history varies by species, with some having long pregnancies and others giving birth to live young or laying eggs. </p>
+
+<script>
+$(document).ready(function(){
+  $("p").hover(function(){
+    $(this).css("background-color", "purple");
+    }, function(){
+    $(this).css("background-color", "pink");
+  });
+});
+</script>
+
+</html>
