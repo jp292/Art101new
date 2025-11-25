@@ -1,3 +1,5 @@
+ $("#creature").text("DVD");
+ 
 $("#creature").click(function() {
   $("#status").text("You clicked me! 🐾");
   $("#creature").css("background", "blue");
@@ -10,7 +12,10 @@ $("#creature").hover(
 
 $("#creature").dblclick(function() {
   $("#status").text("You woke me up!! 😳");
-  $("#creature").css("transform", "scale(1.2)", "background","red");
+$("#creature").css({
+  transform: "scale(1.2)",
+  background: "red"
+});
 });
 
 $(document).keydown(function(event) {
@@ -22,3 +27,19 @@ $(document).ready(function(){
     $(this).hide();
   });
 });
+
+function moveCreature() {
+    let maxX = $(window).width() - $("#creature").width();
+    let maxY = $(window).height() - $("#creature").height();
+    let newX = Math.random() * maxX;
+    let newY = Math.random() * maxY;
+
+    $("#creature").animate(
+      { left: newX, top: newY },
+      2000, 
+      moveCreature 
+    );
+  }
+
+  $("#creature").css("position", "absolute"); 
+  moveCreature();
