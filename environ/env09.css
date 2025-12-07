@@ -1,0 +1,149 @@
+/* ---------------------------
+   GENERAL PAGE STYLES
+---------------------------- */
+body {
+    background-image: url("ocean.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+}
+
+h1, h2, h3 {
+    color: #0003cc;
+}
+
+/* Highlighted text */
+.high1 {
+    background: rgb(213, 108, 255);
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.high2 {
+    background: rgb(45, 255, 73);
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+/* ---------------------------
+   AQUARIUM TANK
+---------------------------- */
+#tank {
+    width: 90%;
+    height: 400px;
+    margin: 20px auto;
+    border: 6px solid #004e7c;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+
+    /* soft gradient overlay on top of ocean background */
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(2px);
+}
+
+/* ---------------------------
+   FISH STYLES
+---------------------------- */
+.fish {
+    width: 200px;        /* preserves your size settings */
+    position: absolute;
+    cursor: pointer;
+    animation: swim 10s linear infinite;
+}
+
+/* Individual optional tweaks */
+#myshark {
+    top: 20px;
+}
+
+#myscuba {
+    top: 200px;
+}
+
+/* Fish swimming animation */
+@keyframes swim {
+    0% {
+        transform: translateX(-250px);
+    }
+    100% {
+        transform: translateX(120%);
+    }
+}
+
+/* Hover effect (super cute!) */
+.fish:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
+
+/* ---------------------------
+   DESCRIPTION POPUP
+---------------------------- */
+#descriptionBox {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+}
+
+.hidden {
+    display: none;
+}
+
+#closeBtn {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: none;
+    background: #0003cc;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+#closeBtn:hover {
+    background: #4c6cff;
+}
+/* ---------------------------
+   SPEECH BUBBLES
+---------------------------- */
+
+#speechBubble {
+    position: absolute;
+    background: white;
+    padding: 8px 14px;
+    border-radius: 12px;
+    border: 2px solid #0003cc;
+    font-family: "Times New Roman", serif;
+    font-size: 15px;
+    width: fit-content;
+    max-width: 180px;
+    pointer-events: none;
+    z-index: 100;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.3);
+}
+
+/* Little triangle tail */
+#speechBubble::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 20px;
+    border-width: 12px 12px 0;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+/* Hidden class */
+.hidden {
+    display: none;
+}

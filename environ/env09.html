@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>JP's Aquarium</title>
+    <link href="env.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <h1>JP's Aquarium!</h1>
+    <h2>Welcome!</h2>
+
+    <p>
+        <span class="high1"> The ocean is full of many fish!!!! Humans too! </span>
+    </p>
+
+    <!-- FISH TANK CONTAINER -->
+    <div id="tank">
+        <img class="fish" id="myfish" src="fish.png" data-description="A happy little fish who loves to swim in circles.">
+        <img class="fish" id="myshark" src="shark.png" data-description="A friendly shark who just wants snacks… preferably not you.">
+        <img class="fish" id="myscuba" src="scuba.png" data-description="A scuba diver exploring the deep sea!">
+    </div>
+
+    <h2><span class="high2"> More fish coming soon! </span></h2>
+    <h2><span class="high2"> Sea yah later! </span></h2>
+
+    <!-- DESCRIPTION POPUP -->
+    <div id="descriptionBox" class="hidden">
+        <p id="descText"></p>
+        <button id="closeBtn">Close</button>
+    </div>
+
+    <script src="env.js"></script>
+
+</body>
+
+<div id="tank">
+    <img class="fish" id="myfish" src="fish.png"
+         data-description="A happy little fish who loves to swim in circles."
+         data-speech="Blub blub! 🐟">
+
+    <img class="fish" id="myshark" src="shark.png"
+         data-description="A friendly shark who just wants snacks… preferably not you."
+         data-speech="I swear I'm friendly 😇">
+
+    <img class="fish" id="myscuba" src="scuba.png"
+         data-description="A scuba diver exploring the deep sea!"
+         data-speech="Have you seen my bubbles? 🫧">
+</div>
+
+<!-- Speech bubble container -->
+<div id="speechBubble" class="hidden">
+    <p id="bubbleText"></p>
+</div>
+
+
+</html>
